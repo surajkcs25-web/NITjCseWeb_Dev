@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suraj Kumar | Portfolio</title>
+  <style>
+    /* --- Base Styles --- */
+    :root {
+      --bg-color: #f5f5f5;
+      --text-color: #222;
+      --card-bg: #fff;
+      --accent-color: #0077ff;
+      --shadow-color: rgba(0, 0, 0, 0.1);
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #f5f5f5;
+      --card-bg: #1e1e1e;
+      --accent-color: #00b4ff;
+      --shadow-color: rgba(255, 255, 255, 0.05);
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.4s, color 0.4s;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: var(--card-bg);
+      box-shadow: 0 2px 10px var(--shadow-color);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: var(--accent-color);
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+    section {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px var(--shadow-color);
+      position: relative;
+      z-index: 1;
+    }
+
+    img {
+      display: block;
+      margin: 1rem auto;
+      border-radius: 50%;
+      box-shadow: 0 4px 20px var(--shadow-color);
+    }
+
+    h2 {
+      color: var(--accent-color);
+      border-bottom: 2px solid var(--accent-color);
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    a {
+      color: var(--accent-color);
+    }
+
+    /* --- Floating Animated Graphics --- */
+    .float-shape {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.15;
+      z-index: 0;
+      animation: float 10s infinite ease-in-out alternate;
+    }
+
+    .circle1 {
+      width: 120px;
+      height: 120px;
+      background: var(--accent-color);
+      top: 20%;
+      left: 5%;
+      animation-delay: 0s;
+    }
+
+    .circle2 {
+      width: 80px;
+      height: 80px;
+      background: var(--accent-color);
+      bottom: 15%;
+      right: 10%;
+      animation-delay: 3s;
+    }
+
+    .circle3 {
+      width: 150px;
+      height: 150px;
+      background: var(--accent-color);
+      top: 50%;
+      right: 30%;
+      animation-delay: 6s;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px) rotate(0deg); }
+      100% { transform: translateY(-40px) rotate(20deg); }
+    }
+
+    /* --- Dark Mode Toggle Button --- */
+    .theme-toggle {
+      background: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .theme-toggle:hover {
+      transform: scale(1.05);
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 600px) {
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      section {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Floating Graphics -->
+  <div class="float-shape circle1"></div>
+  <div class="float-shape circle2"></div>
+  <div class="float-shape circle3"></div>
+
+  <header>
+    <h1>Suraj Kumar</h1>
+    <nav>
+      <a href="#about-me">About</a>
+      <a href="#my-interests">Interests</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#navigation-links">Links</a>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle">🌙 Dark Mode</button>
+  </header>
+
+  <main>
+    <section id="about-me">
+      <img src="srj.jpg" alt="My Picture" width="200" height="200">
+      <h2>About Me</h2>
+      <p>
+        I am a student at the National Institute of Technology, Jalandhar, pursuing B.Tech in Computer Science and Engineering.
+        I’m passionate about web development, programming, and exploring emerging technologies.
+      </p>
+    </section>
+
+    <section id="my-interests">
+      <h2>My Interests</h2>
+      <ul>
+        <li>Web Development</li>
+        <li>Programming</li>
+        <li>Reading</li>
+        <li>Exploring New Technologies</li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ol>
+        <li>Class 10th from B.V.M. Sr. Sec. School — <strong>95%</strong></li>
+        <li>Class 12th from B.V.M. Sr. Sec. School — <strong>88%</strong></li>
+        <li>B.Tech at <a href="https://www.nitj.ac.in/" target="_blank">NIT Jalandhar</a> — <strong>CGPA 9.5</strong></li>
+      </ol>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <dl>
+        <dt>Personal Portfolio Website</dt>
+        <dd>Built using HTML, CSS, and JavaScript to showcase my skills and projects.</dd>
+
+        <dt>To-Do List App</dt>
+        <dd>React-based to-do list app for daily productivity.</dd>
+
+        <dt>Blog Platform</dt>
+        <dd>Django-powered blogging system for content creation and management.</dd>
+      </dl>
+    </section>
+
+    <section id="navigation-links">
+      <h2>Navigation Links</h2>
+      <a href="https://github.com/surajkcs25-web" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
+      <a href="mailto:suraj@example.com">Email</a>
+    </section>
+  </main>
+
+  <script>
+    // Light/Dark Mode Toggle
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      toggleBtn.textContent = document.body.classList.contains('dark') ? '🌞 Light Mode' : '🌙 Dark Mode';
+    });
+  </script>
+</body>
+</html>
