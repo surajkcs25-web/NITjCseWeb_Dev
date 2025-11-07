@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraj Kumar | Portfolio</title>
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header & Navbar */
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px 50px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #f39c12;
+        }
+
+        /* Profile Section */
+        .profile {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            border: 4px solid #2c3e50;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .profile h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .profile p {
+            max-width: 600px;
+            margin: auto;
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Sections */
+        section {
+            padding: 50px 80px;
+        }
+
+        section h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            border-left: 5px solid #f39c12;
+            padding-left: 10px;
+        }
+
+        /* Lists */
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Projects (cards) */
+        #projects dl {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        #projects dt {
+            font-weight: bold;
+            background: #f39c12;
+            color: white;
+            padding: 12px;
+            border-radius: 8px 8px 0 0;
+        }
+
+        #projects dd {
+            background: white;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navigation Links */
+        #navigation-links a {
+            display: inline-block;
+            margin: 8px;
+            padding: 10px 18px;
+            background: #2c3e50;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        #navigation-links a:hover {
+            background: #f39c12;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <a href="#about-me">About Me</a>
+            <a href="#my-interests">Interests</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#navigation-links">Links</a>
+        </nav>
+    </header>
+
+    <!-- Profile -->
+    <section class="profile">
+        <img src="srj.jpg" alt="My Picture">
+        <h2>Suraj Kumar</h2>
+        <p>I am a student at the National Institute of Technology, Jalandhar, pursuing B.Tech in CSE. I love building websites, coding, and learning new technologies.</p>
+    </section>
+
+    <!-- About -->
+    <section id="about-me">
+        <h3>About Me</h3>
+        <p>I am currently in my 1st year at NIT Jalandhar. My passion lies in programming and web development. In my free time, I enjoy reading, problem-solving, and exploring innovative ideas.</p>
+    </section>
+
+    <!-- Interests -->
+    <section id="my-interests">
+        <h3>My Interests</h3>
+        <ul>
+            <li>Web Development</li>
+            <li>Programming</li>
+            <li>Reading</li>
+            <li>Exploring New Technologies</li>
+        </ul>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+        <h3>Education</h3>
+        <ol>
+            <li>Class 10th - B.V.M. Sr. Sec. School (95%)</li>
+            <li>Class 12th - B.V.M. Sr. Sec. School (88%)</li>
+            <li>B.Tech - NIT Jalandhar (CSE, CGPA: 9.5) - <a href="https://www.nitj.ac.in/">Visit NITJ</a></li>
+        </ol>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h3>Projects</h3>
+        <dl>
+            <div>
+                <dt>Personal Portfolio Website</dt>
+                <dd>A personal portfolio website to showcase my projects and skills using HTML, CSS, and JavaScript.</dd>
+            </div>
+            <div>
+                <dt>To-Do List App</dt>
+                <dd>A simple to-do list application built with React.js to manage daily tasks efficiently.</dd>
+            </div>
+            <div>
+                <dt>Blog Platform</dt>
+                <dd>A blogging platform developed using Django where users can create, edit, and delete blog posts.</dd>
+            </div>
+        </dl>
+    </section>
+
+    <!-- Navigation Links -->
+    <section id="navigation-links">
+        <h3>Navigation Links</h3>
+        <a href="https://github.com/surajkcs25-web" target="_self">GitHub (Same Tab)</a>
+        <a href="https://github.com/surajkcs25-web" target="_blank">GitHub (New Tab)</a>
+        <a href="https://github.com/surajkcs25-web" target="_parent">GitHub (Parent)</a>
+        <a href="https://github.com/surajkcs25-web" target="_top">GitHub (Top)</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Suraj Kumar | Built with ❤ in HTML & CSS</p>
+    </footer>
+</body>
+
+</html>
